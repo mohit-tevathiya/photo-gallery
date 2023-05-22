@@ -25,8 +25,11 @@ app.get('/photos', async (req, res) => {
 			next_cursor: req.query.next_cursor,
 		},
 	});
+	// console.log("req.query",req.query)
 	return res.send(response.data);
 });
+
+
 
 app.get('/search', async (req, res) => {
 	const response = await axios.get(BASE_URL + '/resources/search', {

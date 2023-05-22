@@ -10,6 +10,7 @@ const App = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			const responseJson = await getImages();
+			
 			setImageList(responseJson.resources);
 			setNextCursor(responseJson.next_cursor);
 		};
